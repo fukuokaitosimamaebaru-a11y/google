@@ -6,8 +6,8 @@ body {
     font-family: 'Roboto', sans-serif;
     background: #f2f2f2;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;   /* 横中央 /
+    align-items: center;       / 縦中央 /
     min-height: 100vh;
 }
 
@@ -19,47 +19,43 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 内部要素左揃え */
+    align-items: center;       / ★中央に修正 /
     transition: all 0.3s;
 }
 
-/* ロゴは中央 */
+/ ロゴ中央 /
 .google-logo {
     width: 120px;
     margin-bottom: 30px;
-    align-self: center;
 }
 
-/* 内部テキスト・メッセージを少し右寄せ */
-.google-login-container > p,
-.google-login-container > .message {
-    margin-left: 10px;
-}
-
+/ タイトル中央 /
 .title {
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 8px;
-    text-align: left;
+    text-align: center;        / ★中央 /
 }
 
+/ サブタイトル中央 /
 .subtitle {
     font-size: 14px;
     color: #5f6368;
-    text-align: left;
+    text-align: center;        / ★中央 /
     margin-bottom: 24px;
     line-height: 1.4;
 }
 
-/* ログイン画面 & アカウント作成画面 共通 input */
+/ input /
 input {
-    width: 100%;               /* 幅を揃える */
-    padding: 12px 14px;        /* ログイン画面と同じパディング */
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 14px;
     font-size: 15px;
     border: 1px solid #dadce0;
     border-radius: 4px;
-    margin-bottom: 20px;       /* ログイン画面と同じ間隔 */
-    box-sizing: border-box;    /* パディング込みで幅を計算 */
+    margin-bottom: 20px;
+    box-sizing: border-box;
     outline: none;
 }
 
@@ -68,18 +64,13 @@ input:focus {
     box-shadow: 0 0 0 2px rgba(66,133,244,0.2);
 }
 
-/* ボタン配置 */
+/ ボタン配置 /
 .buttons {
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* ログイン画面は右揃え */
+    justify-content: center;   / 中央 /
     gap: 10px;
     margin-bottom: 10px;
-}
-
-/* アカウント作成画面ボタンは中央揃え */
-#create-step .buttons {
-    justify-content: center;
 }
 
 button {
@@ -90,7 +81,6 @@ button {
     background: #4285f4;
     color: #fff;
     cursor: pointer;
-    transition: background 0.2s;
 }
 
 button:hover {
@@ -123,15 +113,14 @@ button:hover {
     color: #d93025;
     min-height: 18px;
     margin-top: 8px;
+    text-align: center;
 }
 
 .step { display: none; }
 .step.active { display: block; }
 
-/* スマホ対応 */
+/ スマホ対応 */
 @media (max-width: 400px) {
     .google-login-container { width: 90%; padding: 30px 20px; }
     .google-logo { width: 100px; margin-bottom: 20px; }
 }
-
-style.cs
