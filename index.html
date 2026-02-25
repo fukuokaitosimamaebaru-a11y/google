@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ログイン - Googleアカウント</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="google-login-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
+         alt="Google" class="google-logo">
+
+    <!-- ログインフォーム -->
+    <div id="email-step" class="step active">
+        <p class="title">Googleアカウントでログイン</p>
+        <p class="subtitle">メールアドレスまたは電話番号を入力してください</p>
+        <input type="text" id="username" placeholder="メールアドレス">
+        <div class="buttons">
+            <button id="next-btn">次へ</button>
+        </div>
+        <p class="message" id="email-message"></p>
+        <button id="create-account-btn">アカウントを作成</button>
+    </div>
+
+    <!-- パスワードステップ -->
+    <div id="password-step" class="step">
+        <p class="title">パスワード</p>
+        <p class="subtitle" id="user-display"></p>
+        <input type="password" id="password" placeholder="パスワード">
+        <div class="buttons">
+            <button id="back-btn">戻る</button>
+            <button id="login-btn">ログイン</button>
+        </div>
+        <p class="message" id="password-message"></p>
+    </div>
+
+    <!-- アカウント作成フォーム -->
+    <div id="create-step" class="step">
+        <p class="title">アカウントを作成</p>
+        <input type="text" id="new-name" placeholder="名前">
+        <input type="text" id="new-email" placeholder="メールアドレス">
+        <input type="password" id="new-password" placeholder="パスワード">
+        <div class="buttons">
+            <button id="back-create-btn">戻る</button>
+            <button id="register-btn">登録</button>
+        </div>
+        <p class="message" id="create-message"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
